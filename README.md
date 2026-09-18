@@ -32,6 +32,21 @@ project reads. **Every stage is useful on its own.** Read it as a menu.
 
 If you want one afternoon that pays off:
 
+**First, three installs** — all free except the last, and the whole setup rests on them:
+
+- **[Obsidian](https://obsidian.md)** — a markdown editor over a plain folder. The folder is the
+  point; Obsidian is a pleasant way to see it.
+- **[Claude Code](https://claude.com/claude-code)** — the CLI. The
+  [Obsidian Claude Sidebar plugin](https://github.com/peterkaminski/obsidian-claude-sidebar) puts
+  it beside your notes, which is where most of this happens.
+- **git** — already on macOS once you have the developer tools.
+
+A **Claude subscription** is the real cost; Claude Code is included in the paid plans. If the blank
+page is the obstacle, the [PKAI Starter Kit](https://peterkaminski.ai/starter-kit/) sets this up
+conversationally instead — see [the setup manual](setup.md).
+
+**Then:**
+
 1. Make a folder. `git init -b main`.
 2. Write a `CLAUDE.md` — what this project is, how you want to work, and a table of what the
    agent may do without asking. Half a page.
@@ -62,25 +77,23 @@ lifecycle, not a defect.
 
 **Corrections, questions and forks welcome.**
 
-## The other version
+## Make sure to buy my book!
 
-A colleague made this as a joke.
+Coming in 2028!
 
 <img src="images/tims-vibe-coding-bible.png" alt="A mock book cover: Tim's Vibe Coding Bible, 100% comprehensive, unauthoritative, what you prompted. Foreword by a large language model that has not read the book." width="420">
 
-It is also a fair description of what this repository is arguing against. *"Debug by typing
+Kidding aside, it’s a fair description of what this repository is arguing against. *"Debug by typing
 'still broken' with growing confidence"* is exactly what happens without a spec, and
 *"covers every framework the model picked without asking you"* is what happens without owning
 your own stack. The bonus CD-ROM is the only part I cannot improve on.
-
 ## About
 
-**Tim Bonnemann** — community builder and e-participation specialist in San José, California, and
-a Certified Lovable Expert.
+**Tim Bonnemann** — Community strategist and e-participation specialist in San José, California, Certified Lovable Expert.
 
 [plansphere.com](https://plansphere.com) · [LinkedIn](https://www.linkedin.com/in/tbonnemann/)
 
-**The projects this came from:**
+**A few of the projects this came from:**
 [ParticipateDB](https://participatedb.com) ·
 [Schlagerwolke](https://schlagerwolke.de) ·
 [Levantrain](https://levantrain.net) ·
