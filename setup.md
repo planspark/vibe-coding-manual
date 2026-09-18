@@ -38,8 +38,10 @@ can read all of it in any editor, and so can the next tool you use.
 
 **I did not invent this.** The shape — a folder of plain markdown, an AI agent living inside it,
 memory and session notes as files — comes from [Peter Kaminski](https://peterkaminski.ai), whose
-AI-agents course is what got me started in early 2026. He has been building wiki-shaped knowledge
-systems for a long time, well before the idea got a name and a famous essay.
+excellent March/April 2026 course
+**[Agentic AI with Pete](https://learn.peterkaminski.ai/)** got me started on the Obsidian/Claude
+setup. He has been building wiki-shaped knowledge systems for a long time, well before the idea
+got a name and a famous essay.
 
 **If you are starting from nothing, start with his [PKAI Starter Kit](https://peterkaminski.ai/starter-kit/).**
 You install it, then talk to the assistant inside your own vault and it walks you through setting

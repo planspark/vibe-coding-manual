@@ -4,8 +4,8 @@
 
 **This is how a good handful of small social web apps got built by a non-technical contributor.**
 
-Not a course, nothing to buy — a working description of a setup in daily use, written down so
-somebody else can copy the parts that are useful. **Three documents:**
+A working description of a setup in daily use, written down so somebody else can copy the parts
+that are useful. **Three documents:**
 
 ### 📁 [The setup manual](setup.md)
 
@@ -28,34 +28,15 @@ project reads. **Every stage is useful on its own.** Read it as a menu.
 
 ---
 
-## The shortest path to a first win
+## Where to start
 
-If you want one afternoon that pays off:
+**[The setup manual](setup.md).** One afternoon gets you a folder, a charter, and an agent that
+reads both — which is enough to feel the difference. The rest of this repository is refinement on
+top of that.
 
-**First, three installs** — all free except the last, and the whole setup rests on them:
-
-- **[Obsidian](https://obsidian.md)** — a markdown editor over a plain folder. The folder is the
-  point; Obsidian is a pleasant way to see it.
-- **[Claude Code](https://claude.com/claude-code)** — the CLI. The
-  [Obsidian Claude Sidebar plugin](https://github.com/peterkaminski/obsidian-claude-sidebar) puts
-  it beside your notes, which is where most of this happens.
-- **git** — already on macOS once you have the developer tools.
-
-A **Claude subscription** is the real cost; Claude Code is included in the paid plans. If the blank
-page is the obstacle, the [PKAI Starter Kit](https://peterkaminski.ai/starter-kit/) sets this up
-conversationally instead — see [the setup manual](setup.md).
-
-**Then:**
-
-1. Make a folder. `git init -b main`.
-2. Write a `CLAUDE.md` — what this project is, how you want to work, and a table of what the
-   agent may do without asking. Half a page.
-3. Open Claude Code in it and ask it to read the vault and tell you what it thinks the project
-   is. **Its answer grades your charter, not the agent.**
-4. Fix the charter. Repeat once.
-5. Start a session note before you do the actual work, not after.
-
-That is the whole idea. Everything else is refinement.
+If you would rather be walked through it than read a manual, the
+[PKAI Starter Kit](https://peterkaminski.ai/starter-kit/) does the setup conversationally, and
+`setup.md` explains how to point it this way afterwards.
 
 ## Who this is for
 
@@ -86,7 +67,7 @@ Coming in 2028!
 Kidding aside, it’s a fair description of what this repository is arguing against. *"Debug by typing
 'still broken' with growing confidence"* is exactly what happens without a spec, and
 *"covers every framework the model picked without asking you"* is what happens without owning
-your own stack. The bonus CD-ROM is the only part I cannot improve on.
+your own stack. The bonus CD-ROM is the best part. An instant classic!
 ## About
 
 **Tim Bonnemann** — Community strategist and e-participation specialist in San José, California, Certified Lovable Expert.
