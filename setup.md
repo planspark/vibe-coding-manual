@@ -7,7 +7,7 @@
 
 This is the shared setup behind everything else here. It is not about building web apps —
 it works the same for a language-learning vault, a research project, or a book. The
-[vibecoding guide](vibecoding.md) starts from this and adds the app-specific stages.
+[vibe coding guide](vibecoding.md) starts from this and adds the app-specific stages.
 
 **What you get:** an assistant that opens a session already knowing your project’s history,
 decisions and constraints — instead of one you re-brief every time.
@@ -276,7 +276,7 @@ or whether it could not look and said nothing.
 
 ## Where next
 
-- **[The vibecoding guide](vibecoding.md)** — the eight stages, if you are building web apps
+- **[The vibe coding guide](vibecoding.md)** — the eight stages, if you are building web apps
 - **Virtual Spanish tutor** — the same setup pointed at language learning *(coming)*
 
 *Questions and corrections welcome. This is a living document — the date at the top is

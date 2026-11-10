@@ -1,4 +1,4 @@
-# The vibecoding guide
+# The vibe coding guide
 
 > How to take advantage of AI-assisted web development tools as a non-technical contributor
 > — one stage at a time, in the order things actually arrived.

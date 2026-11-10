@@ -20,7 +20,7 @@ four questions, a rough draft, two adversarial reviews, a technical design, a si
 then version 1.0. **At least two-thirds of the work on a project happens here.** If you read one
 document in this repository, read this one.
 
-### 🛠 [The vibecoding guide](vibecoding.md)
+### 🛠 [The vibe coding guide](vibecoding.md)
 
 The eight stages of building web apps this way, in the order they actually arrived — from a
 builder and a prompt, through a database you control, to a versioned library of rules every
