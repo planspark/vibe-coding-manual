@@ -162,7 +162,7 @@ flowchart LR
 not one your builder manages for you. That means the dashboard, the SQL editor, the CLI, and
 most importantly **the ability to issue credentials to something that isn't you**.
 
-**That last one is the door to stage 5, and it is where I found out the hard way.** When I
+**That last one is the door to stage 5.** When I
 started the project that would be maintained by overnight agents, the database was on the
 builder's managed backend — and there was no way to issue those agents write credentials. An
 agent that writes to your database needs write access to your database. If you cannot grant
