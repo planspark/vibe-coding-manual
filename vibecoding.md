@@ -546,22 +546,6 @@ is either working or blind, and its silence can't tell you which.
 *Everything above is in daily use. Everything below is on the list, and saying so is more useful
 than pretending the ladder ends where I happen to be standing.*
 
-### Loop-based development, a.k.a. loop engineering *(in progress)*
-
-**The biggest change in how the work feels since the vault itself.** Everything above is, at
-heart, a conversation: I ask, the AI answers, I read it, I ask again. I am the loop.
-
-The next step is handing the loop over. Instead of a prompt, the agent gets a goal and **a check
-that defines "done"** (the tests pass, the build is clean, the spec's acceptance criteria hold), and
-it iterates on its own: change the code, run the check, read the failure, fix, run it again. I
-review the result instead of every step.
-
-**What makes it work is everything earlier in this guide.** A loop is only as good as its
-definition of done, which is why the specs and the tests matter more here, not less. It also needs
-a budget and a stop condition, and narrow permissions, because an agent that can retry forever will.
-And the [checking habit](#how-i-check-things) applies with full force: *a check that could not run
-is not a check that passed*, and a loop will happily report green on one.
-
 ### Going from one person to two
 
 **The step that changes everything else on this list.** Most of what is described in this manual
@@ -596,6 +580,22 @@ exactly when things are busiest.
 **CD isn't there yet.** Deploying is still the builder's publish button. That's fine for one
 person, and it stops being fine with more than one contributor (see above). With one
 person a forgotten step is a mistake; with two it is a mistake that lands on somebody else.
+
+### Loop-based development, a.k.a. loop engineering *(in progress)*
+
+**The biggest change in how the work feels since the vault itself.** Everything above is, at
+heart, a conversation: I ask, the AI answers, I read it, I ask again. I am the loop.
+
+The next step is handing the loop over. Instead of a prompt, the agent gets a goal and **a check
+that defines "done"** (the tests pass, the build is clean, the spec's acceptance criteria hold), and
+it iterates on its own: change the code, run the check, read the failure, fix, run it again. I
+review the result instead of every step.
+
+**What makes it work is everything earlier in this guide.** A loop is only as good as its
+definition of done, which is why the specs and the tests matter more here, not less. It also needs
+a budget and a stop condition, and narrow permissions, because an agent that can retry forever will.
+And the [checking habit](#how-i-check-things) applies with full force: *a check that could not run
+is not a check that passed*, and a loop will happily report green on one.
 
 ### AI via APIs *(in progress)*
 
