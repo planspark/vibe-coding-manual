@@ -3,7 +3,7 @@
 > How to take full advantage of AI-assisted web development tools as a non-technical contributor
 > — one stage at a time, in the order things actually arrived.
 
-*Last updated: 2026-09-18 · Companion to [the setup manual](setup.md)*
+*Last updated: 2026-11-09 · Companion to [the setup manual](setup.md)*
 
 **Read this as a menu, not a ladder.** Every stage below was useful on its own, often for
 months. Nothing here needs the stage after it. Each one got added when a new *want* appeared —
@@ -13,6 +13,26 @@ Stage 4 is the big one and lives in its own document: **[the setup manual](setup
 
 **But read the section before Stage 1 first.** The specs came before any of the stages did, and
 they are the part that would still be worth doing if every tool here disappeared.
+
+---
+
+## Before anything else: this is one path, not the path
+
+**This is how I ended up working, not a survey of how anyone should.** Two kinds of gap are worth
+naming up front, because a document like this can read as more considered than it was.
+
+**Tools I have not tried properly.** I looked at Bolt very early on and went with Lovable — I do
+not remember a rigorous reason, and it may have been gut feel. It has turned out well: they have
+improved enormously over the past year and it reads as a reliable development and design partner
+rather than a toy. But **I have not seriously used Replit, Codex, or most of the field**, so
+nothing here is a comparison and none of it is a recommendation against anything.
+
+**Capabilities I have not used.** I have barely touched skills — in Lovable or in Claude — and I
+have not been feeding Lovable much project context lately: briefings, background, accumulated
+knowledge. Not on principle. **Things have worked well enough that the need never got urgent**,
+which is a perfectly ordinary reason and also exactly the kind of blind spot worth declaring.
+
+So: take what is useful, and assume the parts I have not explored are not evidence about anything.
 
 ---
 
@@ -275,6 +295,35 @@ alongside the builder, and it reaches the database directly — running migratio
 command to run in the terminal when something needs your hand on it. Lovable and Claude Code are
 both doing development work on the same project, from different angles.
 
+### The part that surprised me most: two AIs that argue
+
+Once this is running you have **two AIs working on the same project from different angles**, and
+that turns out to be the most useful property of the whole arrangement.
+
+**They know different things.** The agent in the vault has the wider view — the specs, the
+decisions, the history, why things are the way they are. The builder is closer to the stack it
+builds on, and knows things about that stack the vault agent does not.
+
+**So I have them talk through me.** A typical pattern: the vault agent writes a long, specific
+prompt for the builder — entire migrations outlined, the copy written out, the edge cases named —
+and the builder executes it. I also still work directly in the builder's chat for small things:
+*fix this, add that.*
+
+**What makes it work is that neither just complies.** Handed a large prompt, the builder will
+often come back and either ask before proceeding, or execute and then report — what it did, what
+it did not do, what it decided on its own, and what it wants me to decide first. That last
+category is the valuable one.
+
+And it runs the other way just as often. The vault agent regularly says some version of *"you are
+right, that is the better approach"* or *"that was an oversight on my end."* Sometimes it pushes
+back instead: *"good point, however — because of X and Y we should do it this way. But let me
+improve the thing so it can handle your case."*
+
+**Neither of them is right all the time, and that is the point.** What they seem genuinely good at
+is knowing when they cannot confidently execute something — and saying so. Two of them,
+disagreeing in front of you, catch things one of them alone would have implemented beautifully
+and wrongly.
+
 **→ [The setup manual](setup.md) is the whole of this stage.**
 
 **What it made possible to want.** Once one project has this, the others visibly do not. And
@@ -534,6 +583,101 @@ have contradicted you, you have not checked anything.
 
 **Four more of these**, for when you are running several projects and standing monitors, are in
 [stage 8](#stage-8--projectassistant-messaging-pending).
+
+---
+
+## What comes next — the stages I have not built yet
+
+*Everything above is in daily use. Everything below is on the list, and saying so is more useful
+than pretending the ladder ends where I happen to be standing.*
+
+### Loop-based development *(in progress)*
+
+**The biggest change in how the work feels since the vault itself.** Everything above is, at
+heart, a conversation: I ask, the AI answers, I read it, I ask again. I am the loop.
+
+The next step is handing the loop over. Instead of a prompt, the agent gets a goal and **a check
+that defines "done"** (the tests pass, the build is clean, the spec's acceptance criteria hold), and
+it iterates on its own: change the code, run the check, read the failure, fix, run it again. I
+review the result instead of every step.
+
+**What makes it work is everything earlier in this guide.** A loop is only as good as its
+definition of done, which is why the specs and the tests matter more here, not less. It also needs
+a budget and a stop condition, and narrow permissions, because an agent that can retry forever will.
+And the [checking habit](#how-i-check-things) applies with full force: *a check that could not run
+is not a check that passed*, and a loop will happily report green on one.
+
+### Staging and production, properly separated
+
+**This is the one that is now overdue.** So far, published *is* production — the builder's publish
+button pushes the current state live, and there is no environment between "what I am working on"
+and "what real people are using."
+
+That is fine while nobody is using it. **It stops being fine the moment there are meaningful user
+numbers**, which is where a couple of these projects now are. What it needs: a staging environment
+with its own database, a deliberate promotion step, and the discipline that nothing reaches
+production without having been somewhere else first.
+
+### CI/CD
+
+*(Continuous integration and continuous delivery — automated checks on every change, and an
+automated path from a merged change to a deployed one.)*
+
+Right now my checks are commands I remember to run. They are good commands and I do run them —
+but "the human remembered" is not a control, and it degrades exactly when things are busiest.
+
+**This matters much more with more than one contributor**, which is the next item. With one person
+a forgotten check is a mistake; with two it is a mistake that lands on somebody else.
+
+### Going from one person to two
+
+**The step that changes everything else on this list.** Most of what is described in this manual
+assumes a single person who can hold the whole picture and whose habits are the process.
+
+Two people means the habits have to become explicit: who reviews what, what may go straight to
+main, how a database change gets agreed rather than just made. I have one project with a
+co-founder and this is the pressure that is surfacing there first. **Most of the machinery in the
+later stages — the shared library, the written charters, the alignment loop — turns out to be
+preparation for exactly this**, even though I built it for myself.
+
+### Agents in the cloud
+
+The agents in [stage 5](#stage-5--ai-agents-on-a-schedule) run on my laptop, so they stop whenever
+it sleeps, travels or reboots, and a gap looks exactly like a quiet day. Some things can't live on
+a laptop at all: anything other people's software calls, such as a feed or a webhook, has to
+answer whenever it is asked.
+
+**What it needs:** an always-on place for the scheduled agents to run, their keys in a secrets
+store rather than files on disk, a spending cap per run, and an alert when a run fails *or simply
+doesn't happen*.
+
+### Paying for the AI steps *(in progress)*
+
+Agents that call a model can bill a personal subscription or an API key, and it isn't always
+obvious which. In one project, an API key sitting in the agents' environment quietly overrode the
+subscription, so every scheduled run was billed per call while it looked free. A subscription also
+ties the agents to one person's login on one machine, which the previous item can't live with.
+
+**I am moving to API keys**, metered per call, with a cap per key, and the bill checked against
+what the agents were supposed to be doing. One project already calls two providers' APIs for its
+moderation queue.
+
+### Running open models locally
+
+I have barely started here — a week or two of poking at it. The reports are good and improving
+fast, and the appeal is obvious: cost, privacy, and not being dependent on somebody else's
+availability for routine work.
+
+**I have nothing useful to report yet.** Listed because it is clearly next, not because I have an
+opinion worth having.
+
+### Hosting it myself
+
+Instead of publishing through the builder, running the apps in an environment I control.
+
+**Not urgent** — and worth being honest that the current arrangement works well. But the whole
+argument in [stage 3](#stage-3--a-standalone-supabase-project) is about not depending on a single
+vendor, and hosting is the last piece still sitting on the other side of that line.
 
 ---
 
