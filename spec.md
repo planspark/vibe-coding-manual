@@ -18,11 +18,11 @@ It also came first, by a long way — and how it came first is worth telling acc
 tidy version is wrong.
 
 **Day one of the first project, 23 January 2025.** The second commit in that repository reads
-*"Add initial project structure and PRD."* It contains three source files and no document. The
-spec had been pasted into the builder's chat window, and **it was never committed — there is no
-PRD anywhere in that repository's 546 commits.**
+*“Add initial project structure and PRD.”* It contains three source files and no document. The
+spec had been pasted into the builder’s chat window, and **it was never committed — there is no
+PRD anywhere in that repository’s 546 commits.**
 
-So the practice is that old. **The artifact isn't.** The earliest spec that still exists was
+So the practice is that old. **The artifact isn’t.** The earliest spec that still exists was
 written six weeks later, on 9 March 2025, in [ChatPRD](https://www.chatprd.ai) — a tool built for
 exactly this — and every one since has lived in a file rather than a conversation.
 
@@ -41,7 +41,7 @@ not depend on the software. But the software is what made it keepable.
 **Two things about how it is actually used, both of which surprised me when I checked:**
 
 **Specs get written for landing pages, not just applications.** Two of the six documents are
-titled *"(landing page)"*. A single page still has an audience, a claim, a thing it must not
+titled *“(landing page)”*. A single page still has an audience, a claim, a thing it must not
 promise, and a way to tell whether it worked — and the habit is worth more when it scales down
 than when it is reserved for occasions.
 
@@ -63,7 +63,7 @@ opposite is true, for one reason:
 **An AI builder will never tell you your requirements are ambiguous. It will pick a reading and
 implement it beautifully.**
 
-A human contractor asks "wait, what happens if two people submit at once?" A builder does not
+A human contractor asks “wait, what happens if two people submit at once?” A builder does not
 ask. It decides, silently, in a way you will discover four weeks later when the behavior is load-
 bearing and the schema has grown around it. **Every ambiguity you leave in the spec becomes a
 decision someone else made on your behalf.**
@@ -79,7 +79,7 @@ Across five projects the documents converge hard. This is not a template anyone 
 what the same set of questions looks like when you have to answer them eight times.
 
 **1 · Why this exists.** The problem, in the world, before any mention of software. One of them
-opens with *"the one hypothesis"* — the single belief that, if wrong, makes the whole thing
+opens with *“the one hypothesis”* — the single belief that, if wrong, makes the whole thing
 pointless. Naming that early is uncomfortable and useful.
 
 **2 · Who it is for.** Users and roles. Not demographics — *what each one is trying to get done*,
@@ -91,11 +91,11 @@ and which of them the first version is allowed to disappoint.
 its own section, usually near the front. It is the load-bearing part: an AI builder will happily
 build anything you mention, so **the list of things you are deliberately not building is the only
 thing standing between a two-week MVP and a six-month one.** One project words it well —
-*"out of scope (v1): anticipated, not foreclosed"* — the difference between *no* and *not yet*,
+*“out of scope (v1): anticipated, not foreclosed”* — the difference between *no* and *not yet*,
 which matters because the data model has to survive the second one.
 
 **5 · Decisions, dated, with reasoning.** Not just what was chosen but what was rejected and why.
-One PRD has a section headed *"Decisions (resolved 26 June 2026)"*. Six months later, that date
+One PRD has a section headed *“Decisions (resolved 26 June 2026)”*. Six months later, that date
 is the difference between a decision you can revisit and a mystery you have to re-litigate.
 
 **6 · Open questions, listed as open.** The things you have not decided, written down as
@@ -103,15 +103,15 @@ undecided rather than quietly left blank. A blank looks like an oversight to a b
 will fill it.
 
 **7 · The data model.** Tables and relationships, sketched before anything creates them. One
-project labels its version *"designed not to foreclose"* — the point is not to get the schema
-right on day one, it is to notice which of today's shortcuts would be expensive to undo.
+project labels its version *“designed not to foreclose”* — the point is not to get the schema
+right on day one, it is to notice which of today’s shortcuts would be expensive to undo.
 
 **8 · Cross-cutting requirements.** Security, privacy, accessibility, performance — as
 requirements, not as a cleanup pass. This is the section that eventually got extracted into a
 shared standards library, because it was the same text every time (stage 7).
 
-**9 · Phasing.** What ships first and why. One project's is *"driven by the event calendar, not
-by module completeness"*, which is the correct reason and not the natural one.
+**9 · Phasing.** What ships first and why. One project’s is *“driven by the event calendar, not
+by module completeness”*, which is the correct reason and not the natural one.
 
 **10 · Success metrics.** How you will know. Written before launch, when you can still be honest,
 rather than after, when whatever happened becomes the goal.
@@ -204,15 +204,15 @@ section owns.
 
 The project that runs both describes the difference better than I can:
 
-> Where the stress test asked *"is this section complete?"*, this asks *"does the system behave
-> coherently when a real person moves through it?"*
+> Where the stress test asked *“is this section complete?”*, this asks *“does the system behave
+> coherently when a real person moves through it?”*
 
 Sixteen further findings, tagged **blocker**, **sharpen** or **accept** — the third category being
 a limitation you are choosing with your eyes open, which is worth having a name for.
 
 **This is called adversarial review**, and the brief matters more than the tool. Ask explicitly for
 attack rather than assessment: *find what is ambiguous, find what contradicts, find what a builder
-would have to guess.* A reviewer asked to "review this" will tell you it reads well.
+would have to guess.* A reviewer asked to “review this” will tell you it reads well.
 
 **Use a different session than the one that helped you write it.** One that helped build the
 reasoning will defend it. Beyond that it hardly matters which: the same assistant in a fresh
@@ -259,17 +259,17 @@ the structure and architecture usually hold for months rather than days.
 
 Three things worth doing at this stage:
 
-**Specify a design system before any pages.** Not page designs — the colour relationships, the
+**Specify a design system before any pages.** Not page designs — the color relationships, the
 typography, what the elements are and how they relate to each other. Documented properly, the
 builder produces consistent pages from it without being told page by page. And because it is a
 layer, the look can be swapped later without rebuilding anything underneath.
 
 **Say how big it has to get, in the requirements.** *This should work for ten thousand users, not
-ten* changes how the database is laid out and which queries get optimised from the start. Retrofit
+ten* changes how the database is laid out and which queries get optimized from the start. Retrofit
 that and you are migrating.
 
 **Tests on the load-bearing paths.** Eighty-twenty rather than total coverage — but tests are close
 to free, and a suite that goes red tells you something was touched that should not have been.
 
 Then there is real work left that no specification removes: a custom domain, email configuration,
-and a great deal of copy tweaking. **Nobody's spec survives contact with actual sentences.**
+and a great deal of copy tweaking. **Nobody’s spec survives contact with actual sentences.**

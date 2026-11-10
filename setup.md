@@ -9,7 +9,7 @@ This is the shared setup behind everything else here. It is not about building w
 it works the same for a language-learning vault, a research project, or a book. The
 [vibecoding guide](vibecoding.md) starts from this and adds the app-specific stages.
 
-**What you get:** an assistant that opens a session already knowing your project's history,
+**What you get:** an assistant that opens a session already knowing your project’s history,
 decisions and constraints — instead of one you re-brief every time.
 
 ---
@@ -102,7 +102,7 @@ A working order, roughly stable to most-volatile:
 in one line. A charter that duplicates another document is a file you now have to update
 twice, and you will update it once.
 
-**Facts about the project go stale silently.** A "current phase" section saying *no code has
+**Facts about the project go stale silently.** A “current phase” section saying *no code has
 been written yet* is actively harmful three weeks later — the agent will believe it. Put
 volatile facts last, and expect to prune.
 
@@ -127,7 +127,7 @@ Types worth having: **user** (who you are), **feedback** (how you want it to wor
 
 **What makes this work is the index.** The agent reads `MEMORY.md` every session — a few
 hundred words — and opens individual memories only when relevant. Reading everything every
-time does not scale and is the reason "just put it all in the prompt" stops working.
+time does not scale and is the reason “just put it all in the prompt” stops working.
 
 **Save during the conversation, not at the end.** The end may not come.
 
@@ -185,7 +185,7 @@ A shape that holds up:
 ```
 
 **That last line earns its keep more than the rest combined.** A session that opens with
-"so, where were we" spends its first ten minutes rebuilding state the previous session had in
+“so, where were we” spends its first ten minutes rebuilding state the previous session had in
 hand. Ending with *what happens next* costs one sentence, once.
 
 **Favor why over what.** The diff already records what changed.
@@ -232,7 +232,7 @@ that the expensive tool stops being where you do the thinking.
 - [ ] `git init -b main` in the vault, `.gitignore` with `/app` bare
 - [ ] `CLAUDE.md` — what this is, read-first, how we work, authority table
 - [ ] `memory/MEMORY.md`, even if empty
-- [ ] `sessions/` with today's note, opened before you start
+- [ ] `sessions/` with today’s note, opened before you start
 - [ ] Ask the agent to read the vault and tell you what it thinks the project is —
       **its answer is a test of your charter, not of the agent**
 - [ ] Commit

@@ -1,4 +1,4 @@
-# Tim's vibe coding manual
+# Tim’s vibe coding manual
 
 *Last updated: 2026-09-18 · macOS · Obsidian 1.13.7 + Claude Code*
 
@@ -62,11 +62,11 @@ lifecycle, not a defect.
 
 Coming in 2028!
 
-<img src="images/tims-vibe-coding-bible.png" alt="A mock book cover: Tim's Vibe Coding Bible, 100% comprehensive, unauthoritative, what you prompted. Foreword by a large language model that has not read the book." width="420">
+<img src="images/tims-vibe-coding-bible.png" alt="A mock book cover: Tim’s Vibe Coding Bible, 100% comprehensive, unauthoritative, what you prompted. Foreword by a large language model that has not read the book." width="420">
 
-Kidding aside, it’s a fair description of what this repository is arguing against. *"Debug by typing
-'still broken' with growing confidence"* is exactly what happens without a spec, and
-*"covers every framework the model picked without asking you"* is what happens without owning
+Kidding aside, it’s a fair description of what this repository is arguing against. *“Debug by typing
+‘still broken’ with growing confidence”* is exactly what happens without a spec, and
+*“covers every framework the model picked without asking you”* is what happens without owning
 your own stack. The bonus CD-ROM is the best part. An instant classic!
 ## About
 

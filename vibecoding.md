@@ -123,11 +123,11 @@ flowchart LR
 locally and pushed back, and Lovable picks them up. Small edits stop costing credits, and the
 source lives somewhere you own.
 
-**How to set it up.** Connect GitHub from Lovable's project settings, then clone the repo to
+**How to set it up.** Connect GitHub from Lovable’s project settings, then clone the repo to
 your machine. Read the sync direction carefully once — the builder pushes to the same branch
 you do, so **fetch before you start** and expect to resolve the occasional divergence.
 
-**One thing that used to belong here and no longer does.** Until 2026, a builder's stock output
+**One thing that used to belong here and no longer does.** Until 2026, a builder’s stock output
 was a client-rendered single-page app — fine to use, invisible to search engines and link previews,
 because the content only existed after JavaScript ran. Migrating off that was real work and several
 of my projects paid for it.
@@ -157,13 +157,13 @@ flowchart LR
   class DB,Third new
 ```
 
-**What it unlocks.** The app's database lives in a Supabase project **in your own account** —
+**What it unlocks.** The app’s database lives in a Supabase project **in your own account** —
 not one your builder manages for you. That means the dashboard, the SQL editor, the CLI, and
-most importantly **the ability to issue credentials to something that isn't you**.
+most importantly **the ability to issue credentials to something that isn’t you**.
 
 **That last one is the door to stage 5.** When I
 started the project that would be maintained by overnight agents, the database was on the
-builder's managed backend — and there was no way to issue those agents write credentials. An
+builder’s managed backend — and there was no way to issue those agents write credentials. An
 agent that writes to your database needs write access to your database. If you cannot grant
 that, you cannot have the agent, and no amount of cleverness elsewhere gets around it.
 
@@ -172,7 +172,7 @@ say how quickly: the vault and the first agent on one day, the second agent and 
 database the next.
 
 **This is the stage I would most argue for if you only take one.** Everything from stage 5
-onward depends on being able to hand a credential to something that isn't you.
+onward depends on being able to hand a credential to something that isn’t you.
 
 **How to set it up.** Create the Supabase project first, then connect it from the builder.
 Note the project reference, and **link the CLI on day one**:
@@ -190,7 +190,7 @@ and a schema nobody has ever compared against the repo.
 >
 > *An aside, not a step. Skip it until something stops adding up — then come back.*
 
-Two parties could already change the code." Now **three can change the database** — you, the
+Two parties could already change the code.” Now **three can change the database** — you, the
 builder, and later the agents — and nothing reconciles them. This is the largest body of hard-won
 practice in my whole setup, so here is its shape.
 
@@ -222,12 +222,12 @@ I wrap those into two commands: one at the start of a session, one before every 
 
 **Three things learned expensively:**
 
-- **Clean bookkeeping does not mean the recipe works.** One project's ledger read *20 of 20
+- **Clean bookkeeping does not mean the recipe works.** One project’s ledger read *20 of 20
   applied* and could not rebuild its database from those files at all.
-- **"Could not determine" must never look like "no problem."** My drift check has three exit codes
+- **“Could not determine” must never look like “no problem.”** My drift check has three exit codes
   for this: in sync, drifted, and *could not tell.* Collapsing the third into the first turns a
   failure to ask into an answer of no.
-- **Where a change's effect is observable, probe the effect.** Bookkeeping cannot tell you whether
+- **Where a change’s effect is observable, probe the effect.** Bookkeeping cannot tell you whether
   a permission change actually ran. Calling the thing as an anonymous user and reading the error
   code can.
 
@@ -244,7 +244,7 @@ By the time all of this settles, the pieces are deliberately owned by different 
 |---|---|
 | **Lovable** | builds and hosts the app |
 | **GitHub** | the code — mine |
-| **Supabase** | the database, my own project, not the builder's managed one *(stage 3)* |
+| **Supabase** | the database, my own project, not the builder’s managed one *(stage 3)* |
 | **Resend** | transactional email |
 
 **There is no single vendor here I could not walk away from.** A different builder, self-hosting,
@@ -276,7 +276,7 @@ flowchart LR
 **What it unlocks.** The builder only ever sees the code. A vault holds everything it does
 not: the product spec, the technical design, the decisions you made and rejected, the research,
 the session history. Put Claude Code in that folder and you stop having a coding assistant and
-start having something closer to an architect — one that can answer *"why is it like this"*
+start having something closer to an architect — one that can answer *“why is it like this”*
 because the answer is in a file it has read.
 
 **The vault is a plain folder of markdown files, and I work in it through
@@ -311,7 +311,7 @@ builds on, and knows things about that stack the vault agent does not.
 
 **So I have them talk through me.** A typical pattern: the vault agent writes a long, specific
 prompt for the builder — entire migrations outlined, the copy written out, the edge cases named —
-and the builder executes it. I also still work directly in the builder's chat for small things:
+and the builder executes it. I also still work directly in the builder’s chat for small things:
 *fix this, add that.*
 
 **What makes it work is that neither just complies.** Handed a large prompt, the builder will
@@ -319,10 +319,10 @@ often come back and either ask before proceeding, or execute and then report —
 it did not do, what it decided on its own, and what it wants me to decide first. That last
 category is the valuable one.
 
-And it runs the other way just as often. The vault agent regularly says some version of *"you are
-right, that is the better approach"* or *"that was an oversight on my end."* Sometimes it pushes
-back instead: *"good point, however — because of X and Y we should do it this way. But let me
-improve the thing so it can handle your case."*
+And it runs the other way just as often. The vault agent regularly says some version of *“you are
+right, that is the better approach”* or *“that was an oversight on my end.”* Sometimes it pushes
+back instead: *“good point, however — because of X and Y we should do it this way. But let me
+improve the thing so it can handle your case.”*
 
 **Neither of them is right all the time, and that is the point.** What they seem genuinely good at
 is knowing when they cannot confidently execute something — and saying so. Two of them,
@@ -359,7 +359,7 @@ resolve them against what is already there, and write the result.
 
 Agents run locally on a schedule. Nothing is hosted; the laptop has to be on.
 
-The concrete version: one project's dataset went from a seed to tens of thousands of sourced
+The concrete version: one project’s dataset went from a seed to tens of thousands of sourced
 records this way, built by two agents with distinct jobs — one that decides what is worth
 reading, one that reads it and records every claim it finds.
 
@@ -392,16 +392,16 @@ flowchart LR
 ```
 
 **What it unlocks.** A vault of its own, with an agent whose job is not one project but *the
-portfolio*: compare, evaluate, prepare, decide. It is the thing that can answer "which of these
-is furthest along," "what did we decide about X across all of them," and "is this a real problem
-or did I just meet it twice."
+portfolio*: compare, evaluate, prepare, decide. It is the thing that can answer “which of these
+is furthest along,” “what did we decide about X across all of them,” and “is this a real problem
+or did I just meet it twice.”
 
 It also holds the work that belongs to no single project — the writing, the personal site, the
 calendar of what is due when.
 
 **How this actually happened, which is not how I would have planned it.** This vault was my
 *first* — it predates every project in the portfolio. It started as a personal assistant, got
-renamed once it had a personality, and only later did I realise the interesting thing it could do
+renamed once it had a personality, and only later did I realize the interesting thing it could do
 was look at all the other vaults at once. The supervisor role was a discovery, not a design.
 
 **How to set it up.** Exactly like stage 4, one level up. Its own vault, its own charter, its
@@ -461,7 +461,7 @@ checkable later.
 - **Applicability is a condition about what is at stake, never a category of project** — *it has a
   database*, *it serves a second language*, *real people can lose something*. A category can only
   be belonged to; a condition can be checked. **This is what lets a one-page site and a nine-table
-  app read the same library** without the small one drowning in ceremony. "Does not apply here" is
+  app read the same library** without the small one drowning in ceremony. “Does not apply here” is
   conformance, not an exemption.
 - **A standard describes a pattern; it never tracks who has adopted it.** Adoption status goes
   stale within days and gets read as current. Keep project state in the project.
@@ -503,18 +503,18 @@ briefings. **Still manual:** a round starts when I open a session, not on a sche
 
 ### How a round runs
 
-1. **List the library**, reading each version from the document's own header, not from an index.
-2. **Compare against the project's tracking table.** A standard missing from the table is
+1. **List the library**, reading each version from the document’s own header, not from an index.
+2. **Compare against the project’s tracking table.** A standard missing from the table is
    invisible, so look for gaps, not just stale versions.
 3. **For each standard that moved, decide whether it creates work here**, and write down the
-   "no" answers too, so they don't get re-decided every round.
+   “no” answers too, so they don’t get re-decided every round.
 4. **Advance the marker and date it**, even when nothing changed.
 5. **File what generalizes:** a *finding* (something true that travels), a *conflict* (a standard
-   is wrong or can't be met), or a *gap* (nothing covers this). Conflicts are the most valuable.
-6. **Report; don't fix.** Surfacing and fixing are different jobs.
+   is wrong or can’t be met), or a *gap* (nothing covers this). Conflicts are the most valuable.
+6. **Report; don’t fix.** Surfacing and fixing are different jobs.
 
 **Two design rules hold it together.** A message carries findings, never instructions: what
-follows is the reader's decision, because an inbox that can issue orders is a security problem.
+follows is the reader’s decision, because an inbox that can issue orders is a security problem.
 And evidence beats assertion: a finding that comes with a command and its output is worth more
 than one that comes with an opinion.
 
@@ -522,7 +522,7 @@ than one that comes with an opinion.
 
 ## How the agents check things
 
-*Not a stage, but a habit that runs through all of them. I don't run these checks myself: they are
+*Not a stage, but a habit that runs through all of them. I don’t run these checks myself: they are
 rules in the standards library that every agent follows, each one written after a check went
 wrong.*
 
@@ -534,11 +534,11 @@ system actually returns, not against what the repo contains.
 JavaScript runs is invisible to crawlers and looks perfect in developer tools.
 
 **A check that could not run is not a check that passed.** Ask what a failure would have looked
-like. If you can't describe the output that would have contradicted you, you haven't checked
+like. If you can’t describe the output that would have contradicted you, you haven’t checked
 anything.
 
 **Test the tests.** Break a check on purpose and confirm it fails. A monitor that has never fired
-is either working or blind, and its silence can't tell you which.
+is either working or blind, and its silence can’t tell you which.
 
 ---
 
@@ -560,9 +560,9 @@ preparation for exactly this**, even though I built it for myself.
 
 ### Staging and production, properly separated
 
-**This is the one that is now overdue.** So far, published *is* production — the builder's publish
-button pushes the current state live, and there is no environment between "what I am working on"
-and "what real people are using."
+**This is the one that is now overdue.** So far, published *is* production — the builder’s publish
+button pushes the current state live, and there is no environment between “what I am working on”
+and “what real people are using.”
 
 That is fine while nobody is using it. **It stops being fine the moment there are meaningful user
 numbers**, which is where a couple of these projects now are. What it needs: a staging environment
@@ -575,10 +575,10 @@ production without having been somewhere else first.
 automated path from a merged change to a deployed one.)*
 
 **Some CI is in place.** Some projects run their checks automatically on every push; others still
-rely on commands I remember to run, and "the human remembered" is not a control: it degrades
+rely on commands I remember to run, and “the human remembered” is not a control: it degrades
 exactly when things are busiest.
 
-**CD isn't there yet.** Deploying is still the builder's publish button. That's fine for one
+**CD isn’t there yet.** Deploying is still the builder’s publish button. That’s fine for one
 person, and it stops being fine with more than one contributor (see above). With one
 person a forgotten step is a mistake; with two it is a mistake that lands on somebody else.
 
@@ -588,7 +588,7 @@ person a forgotten step is a mistake; with two it is a mistake that lands on som
 heart, a conversation: I ask, the AI answers, I read it, I ask again. I am the loop.
 
 The next step is handing the loop over. Instead of a prompt, the agent gets a goal and **a check
-that defines "done"** (the tests pass, the build is clean, the spec's acceptance criteria hold), and
+that defines “done”** (the tests pass, the build is clean, the spec’s acceptance criteria hold), and
 it iterates on its own: change the code, run the check, read the failure, fix, run it again. I
 review the result instead of every step.
 
@@ -600,30 +600,30 @@ is not a check that passed*, and a loop will happily report green on one.
 
 ### AI via APIs *(in progress)*
 
-Agents that call a model can bill a personal subscription or an API key, and it isn't always
+Agents that call a model can bill a personal subscription or an API key, and it isn’t always
 obvious which, as one surprise on a bill taught me. A subscription also ties the agents to one
-person's login on one machine, which the next item can't live with.
+person’s login on one machine, which the next item can’t live with.
 
 **So I am gradually moving more of the AI work into the cloud**: API keys metered per call, a cap
 on each, and the bill checked against what the agents were supposed to be doing. One project
-already calls two providers' APIs for its moderation queue.
+already calls two providers’ APIs for its moderation queue.
 
 ### Agents in the cloud
 
 The agents in [stage 5](#stage-5--ai-agents-on-a-schedule) run on my laptop, so they stop whenever
-it sleeps, travels or reboots, and a gap looks exactly like a quiet day. Some things can't live on
-a laptop at all: anything other people's software calls, such as a feed or a webhook, has to
+it sleeps, travels or reboots, and a gap looks exactly like a quiet day. Some things can’t live on
+a laptop at all: anything other people’s software calls, such as a feed or a webhook, has to
 answer whenever it is asked.
 
 **What it needs:** an always-on place for the scheduled agents to run, their keys in a secrets
 store rather than files on disk, a spending cap per run, and an alert when a run fails *or simply
-doesn't happen*.
+doesn’t happen*.
 
 ### Use of open models
 
 I have barely started here — a week or two of poking at it. Most likely it starts on my own
 machine and maybe moves to the cloud later. The reports are good and improving
-fast, and the appeal is obvious: cost, privacy, and not being dependent on somebody else's
+fast, and the appeal is obvious: cost, privacy, and not being dependent on somebody else’s
 availability for routine work.
 
 **I have nothing useful to report yet.** Listed because it is clearly next, not because I have an
