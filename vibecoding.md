@@ -472,7 +472,7 @@ Every entry names the incident it came from. A library assembled from taste rath
 one nobody follows, including its author.
 
 **What it made possible to want.** A library only helps if projects notice it changed. Doing
-that by hand across more than half a dozen vaults is exactly the kind of task that gets skipped.
+that by hand across more than ten vaults is exactly the kind of task that gets skipped.
 
 ---
 
@@ -496,7 +496,7 @@ flowchart LR
 its own outbox. The assistant reads those and, where a finding generalizes, amends the standard,
 which then reaches every other project. A defect found once gets fixed everywhere.
 
-**It is running**, across more than half a dozen projects, with findings folded back into the library in periodic
+**It is running**, across more than ten projects, with findings folded back into the library in periodic
 briefings. **Still manual:** a round starts when I open a session, not on a schedule.
 
 ### How a round runs

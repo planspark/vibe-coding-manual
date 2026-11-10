@@ -42,7 +42,7 @@ If you would rather be walked through it than read a manual, the
 
 People who can specify clearly but do not write code — and who have noticed that the
 bottleneck moved. The tools will build almost anything you can describe precisely. Describing
-precisely, deciding what is worth building, and keeping more than half a dozen of them coherent are now the
+precisely, deciding what is worth building, and keeping more than ten of them coherent are now the
 hard parts, and none of them are engineering.
 
 ## What it costs
