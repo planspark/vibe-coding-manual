@@ -1,6 +1,6 @@
 # Tim’s vibe coding manual
 
-*Last updated: 2026-09-18 · macOS · Obsidian 1.13.7 + Claude Code*
+*Last updated: 2026-11-09 · macOS · Obsidian 1.13.7 + Claude Code*
 
 **This is how a good handful of small social web apps got built by a non-technical contributor.**
 

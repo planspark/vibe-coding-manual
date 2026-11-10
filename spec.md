@@ -4,7 +4,7 @@
 > transfers** — every tool named elsewhere in this repo will be obsolete in three years, and this
 > will not be.
 
-*Last updated: 2026-09-18 · Companion to [the guide](vibecoding.md) and [the setup](setup.md)*
+*Last updated: 2026-11-09 · Companion to [the guide](vibecoding.md) and [the setup](setup.md)*
 
 **At least two-thirds of the effort on a project happens here, often closer to eighty percent.**
 If you read one document in this repository, read this one.
