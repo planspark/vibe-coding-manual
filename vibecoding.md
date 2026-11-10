@@ -279,6 +279,12 @@ the session history. Put Claude Code in that folder and you stop having a coding
 start having something closer to an architect — one that can answer *"why is it like this"*
 because the answer is in a file it has read.
 
+**The vault is a plain folder of markdown files, and I work in it through
+[Obsidian](https://obsidian.md).** Obsidian is free, it makes the specs, notes and session logs
+pleasant to read and to link, and a community plugin puts Claude Code in its sidebar, so the
+documents and the agent working on them sit side by side. The folder is the point; Obsidian is
+the window onto it, and any editor would do. Setup details are in [the setup manual](setup.md).
+
 **Three things arrive with it**, and they are the reason the stage is worth its own document:
 
 - **Persistence** — memory files and session notes. The difference between a smart session and
