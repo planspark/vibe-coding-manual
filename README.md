@@ -42,7 +42,7 @@ If you would rather be walked through it than read a manual, the
 
 People who can specify clearly but do not write code — and who have noticed that the
 bottleneck moved. The tools will build almost anything you can describe precisely. Describing
-precisely, deciding what is worth building, and keeping eight of them coherent are now the
+precisely, deciding what is worth building, and keeping more than half a dozen of them coherent are now the
 hard parts, and none of them are engineering.
 
 ## What it costs
@@ -56,7 +56,11 @@ Living documents, written from a setup in active daily use. The dates at the top
 the ones that matter. Things here have been wrong and been corrected; that is the intended
 lifecycle, not a defect.
 
-**Corrections, questions and forks welcome.**
+**Corrections and questions welcome.**
+
+## License
+
+[CC BY 4.0](LICENSE): share and adapt freely, with credit.
 
 ## Make sure to buy my book!
 

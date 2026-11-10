@@ -60,11 +60,11 @@ is not, and neither is a half-built prototype.
 The intuitive read is that AI makes specs unnecessary — just describe it and iterate. The
 opposite is true, for one reason:
 
-**An AI builder will never tell you your requirements are ambiguous. It will pick a reading and
-implement it beautifully.**
+**An AI builder may not always tell you your requirements are ambiguous. It may pick a reading
+and implement it beautifully.**
 
-A human contractor asks “wait, what happens if two people submit at once?” A builder does not
-ask. It decides, silently, in a way you will discover four weeks later when the behavior is
+A human contractor asks “wait, what happens if two people submit at once?” A builder often does
+not ask. It decides, silently, in a way you will discover four weeks later when the behavior is
 load-bearing and the schema has grown around it. **Every ambiguity you leave in the spec becomes a
 decision someone else made on your behalf.**
 
@@ -75,8 +75,8 @@ still can.
 
 ## What actually goes in one
 
-Across five projects the documents converge hard. This is not a template anyone imposed; it is
-what the same set of questions looks like when you have to answer them eight times.
+Across the five projects I surveyed, the documents converge hard. This is not a template anyone imposed; it is
+what the same set of questions looks like when you have to answer them for every project.
 
 **1 · Why this exists.** The problem, in the world, before any mention of software. One of them
 opens with *“the one hypothesis”* — the single belief that, if wrong, makes the whole thing

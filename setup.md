@@ -279,5 +279,5 @@ or whether it could not look and said nothing.
 - **[The vibecoding guide](vibecoding.md)** — the eight stages, if you are building web apps
 - **Virtual Spanish tutor** — the same setup pointed at language learning *(coming)*
 
-*Questions, corrections and forks welcome. This is a living document — the date at the top is
+*Questions and corrections welcome. This is a living document — the date at the top is
 the one that matters.*
