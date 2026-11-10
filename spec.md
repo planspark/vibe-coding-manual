@@ -136,6 +136,28 @@ went wrong without it. The list above is not a template anyone designed. It is a
 If you are starting: write the four. They are enough to be useful immediately. The other eight
 will suggest themselves, and you will know exactly which problem each one is for.
 
+### Where it ended up: today’s template
+
+The scar chart eventually became a fixed skeleton in my standards library. Every new PRD starts as
+all twelve sections, in this order, and a section nobody needs stays in, marked *not needed* with a
+reason, so the reader can see it was considered:
+
+1. **Overview** — the problem, the solution, why now, principles
+2. **Users** — who it’s for, who it’s *not* for, roles and permissions
+3. **Goals and success metrics** — including one north star
+4. **Where we are today** — what’s live, how it’s really used, known debt
+5. **Scope and milestones** — with release criteria, the definition of done
+6. **Features** — one subsection each
+7. **Out of scope and future enhancements** — the one to get right if nothing else is
+8. **Non-functional requirements** — by reference to the standards library, plus any deviations
+9. **Design and UX**
+10. **Technical considerations**
+11. **Assumptions, risks and dependencies**
+12. **Decisions and open questions** — one register, each dated and marked decided, draft or open
+
+**The skeleton decides where things go; an interview decides what gets filled.** The four
+questions fill sections 1, 2, 3 and 7 first, and that alone is a draft worth showing people.
+
 ### Why this is worth the effort — one line of evidence
 
 That March 2025 document contains this, under interface design:
@@ -145,7 +167,7 @@ That March 2025 document contains this, under interface design:
 It was right. It was also ignored — the builder produced a client-rendered single-page app, which
 is what builders produced then. **The project did not get server rendering until sixteen months
 later**, and in between it grew a whole apparatus of workarounds to fake for crawlers what a
-server would have done for free (see [the SSR thread](#the-other-thread--the-ssr-turn)).
+server would have done for free (see [stage 2 of the guide](vibecoding.md#stage-2--github-and-a-local-repo)).
 
 So the spec was correct, and being correct was not sufficient. **Writing the requirement is half
 the work; the other half is checking that what came back actually meets it.** Nothing in an AI
@@ -161,6 +183,15 @@ sixteen months and no part of the build said so.)*
 
 The sections are what goes in. **This is the process that gets you there**, and the version numbers
 are the mechanism rather than decoration.
+
+### Start with four questions
+
+1. **What are you trying to do, and why?**
+2. **Who is it for?**
+3. **What does success look like?**
+4. **What are you deliberately *not* building?**
+
+That last one does more work than the other three combined.
 
 ### v0.1 — the rough draft
 
