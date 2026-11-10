@@ -240,7 +240,7 @@ for it.
 
 By the time all of this settles, the pieces are deliberately owned by different parties:
 
-| | |
+| Service | Role |
 |---|---|
 | **Lovable** | builds and hosts the app |
 | **GitHub** | the code — mine |
