@@ -190,7 +190,7 @@ and a schema nobody has ever compared against the repo.
 >
 > *An aside, not a step. Skip it until something stops adding up — then come back.*
 
-Two parties could already change the code.” Now **three can change the database** — you, the
+Two parties could already change the code. Now **three can change the database** — you, the
 builder, and later the agents — and nothing reconciles them. This is the largest body of hard-won
 practice in my whole setup, so here is its shape.
 
@@ -231,10 +231,8 @@ I wrap those into two commands: one at the start of a session, one before every 
   a permission change actually ran. Calling the thing as an anonymous user and reading the error
   code can.
 
-**What it made possible to want.** Two authors could already change the code. Now two or three
-can change the *schema* — you, the builder, and later the agents — and nothing reconciles them
-automatically. That is a solvable bookkeeping problem, and worth knowing you have signed up
-for it.
+**What it made possible to want.** An agent close enough to both the code and the database to
+do this bookkeeping for you, which is stage 4.
 
 ### The stack this ends up as, and why the separation matters
 

@@ -38,7 +38,7 @@ nothing at the time. The habit came first and the durable
 form followed — which is the useful direction of causation, because it means the practice does
 not depend on the software. But the software is what made it keepable.
 
-**Two things about how it is actually used, both of which surprised me when I checked:**
+**Three things about how it is actually used, all of which surprised me when I checked:**
 
 **Specs get written for landing pages, not just applications.** Two of the six documents are
 titled *“(landing page)”*. A single page still has an audience, a claim, a thing it must not
@@ -64,8 +64,8 @@ opposite is true, for one reason:
 implement it beautifully.**
 
 A human contractor asks “wait, what happens if two people submit at once?” A builder does not
-ask. It decides, silently, in a way you will discover four weeks later when the behavior is load-
-bearing and the schema has grown around it. **Every ambiguity you leave in the spec becomes a
+ask. It decides, silently, in a way you will discover four weeks later when the behavior is
+load-bearing and the schema has grown around it. **Every ambiguity you leave in the spec becomes a
 decision someone else made on your behalf.**
 
 The corollary is that the leverage moved. When building was the constraint, a rough spec was
@@ -121,8 +121,8 @@ rather than after, when whatever happened becomes the goal.
 **12 · Declared deviations.** Where this project knowingly departs from the house standard, with
 the reason. A deviation is fine; a silent one is not.
 
-Not every project has all twelve, and none should be long for its own sake. The shortest is
-217 lines and the longest 401 — a couple of hours of thinking, not a quarter of process.
+Not every project has all twelve, and none should be long for its own sake. Depending on the
+project, that is anywhere from an hour to several days of thinking, not a quarter of process.
 
 ### None of that was there at the start
 
@@ -275,9 +275,9 @@ This is the cheapest full-system test that exists, because the system does not e
 **Nothing reaches 1.0 until the requirements, the technical design and the simulation are
 consistent with each other.** That is what the number means here.
 
-**Getting to 1.0 is the longest part of the whole project** — half a day for something small, a
-couple of weeks for something real. **Expect at least two-thirds of total effort, often closer to
-eighty percent.**
+**Getting to 1.0 is the longest part of the whole project**, anywhere from an hour to several
+days. Relative to the build that follows, most of the work is already done: because the spec is
+solid, the building usually goes off without a hitch.
 
 It is also the part that helps a team most. People have no shortage of ideas. What they usually
 lack is a shared, written answer to *what exactly are we building* — and producing one surfaces the
