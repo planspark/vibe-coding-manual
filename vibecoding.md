@@ -637,10 +637,9 @@ production without having been somewhere else first.
 *(Continuous integration and continuous delivery — automated checks on every change, and an
 automated path from a merged change to a deployed one.)*
 
-**CI is halfway there.** About half my projects run the full gate (install, typecheck, lint,
-tests, build) automatically on every push. That's the 80/20. The other half still rely on
-commands I remember to run, and "the human remembered" is not a control: it degrades exactly when
-things are busiest.
+**Some CI is in place.** Some projects run their checks automatically on every push; others still
+rely on commands I remember to run, and "the human remembered" is not a control: it degrades
+exactly when things are busiest.
 
 **CD isn't there yet.** Deploying is still the builder's publish button. That's fine for one
 person, and it stops being fine with more than one contributor, which is the next item. With one
