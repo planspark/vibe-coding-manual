@@ -597,7 +597,9 @@ have contradicted you, you have not checked anything.
 *Everything above is in daily use. Everything below is on the list, and saying so is more useful
 than pretending the ladder ends where I happen to be standing.*
 
-### Loop-based development *(in progress)*
+### Loop-based development, a.k.a. loop engineering *(in progress)*
+
+*What the cool kids call it.*
 
 **The biggest change in how the work feels since the vault itself.** Everything above is, at
 heart, a conversation: I ask, the AI answers, I read it, I ask again. I am the loop.
