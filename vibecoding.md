@@ -16,7 +16,7 @@ they are the part that would still be worth doing if every tool here disappeared
 
 ---
 
-## Before anything else: this is one path, not the path
+## Before anything else: this is one path, not *the* path
 
 **This is how I ended up working, not a survey of how anyone should.** Two kinds of gap are worth
 naming up front, because a document like this can read as more considered than it was.
