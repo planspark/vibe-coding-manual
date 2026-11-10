@@ -520,10 +520,11 @@ than one that comes with an opinion.
 
 ---
 
-## How I check things
+## How the agents check things
 
-*Not a stage, but the habit that runs through all of them. If I could keep only one page of this
-document, it would be this one.*
+*Not a stage, but a habit that runs through all of them. I don't run these checks myself: they are
+rules in the standards library that every agent follows, each one written after a check went
+wrong.*
 
 **The repo says yes, production says no.** Migration files that were never applied, access rules
 with no permission behind them, deleted code still deployed. So verify against what the live
@@ -594,7 +595,7 @@ review the result instead of every step.
 **What makes it work is everything earlier in this guide.** A loop is only as good as its
 definition of done, which is why the specs and the tests matter more here, not less. It also needs
 a budget and a stop condition, and narrow permissions, because an agent that can retry forever will.
-And the [checking habit](#how-i-check-things) applies with full force: *a check that could not run
+And the [checking habit](#how-the-agents-check-things) applies with full force: *a check that could not run
 is not a check that passed*, and a loop will happily report green on one.
 
 ### AI via APIs *(in progress)*
