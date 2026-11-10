@@ -3,7 +3,7 @@
 > One folder per project. An AI agent that lives inside it, remembers what you decided,
 > and knows what it may do without asking.
 
-*Last updated: 2026-09-18 · Tested with: Obsidian 1.13.7 (installer 1.11.7), Claude Code (Max), macOS*
+*Last updated: 2026-11-09 · Tested with: Obsidian 1.13.7 (installer 1.11.7), Claude Code (Max), macOS*
 
 This is the shared setup behind everything else here. It is not about building web apps —
 it works the same for a language-learning vault, a research project, or a book. The
@@ -70,13 +70,21 @@ your-project/          ← the vault. Its own git repo.
 │   ├── MEMORY.md      ← the index, always read first
 │   └── <slug>.md      ← one file per fact
 ├── sessions/          ← one note per working session
-│   └── YYYY-MM-DD-NNN.md
+│   └── YYYY-MM-DD-NNN-topic.md
+├── backlog.md         ← everything planned, deferred or undecided
+├── standards-alignment.md ← which shared standards apply, and at what version
+├── outbox/            ← findings for your personal assistant (guide, stage 8)
 ├── docs/              ← specs, plans, research
 └── app/               ← the code repo, if there is one. A separate git repo.
 ```
 
 **One vault per project.** Not one vault for everything. The whole benefit is that the agent
 sees *this* project entirely and nothing else — which is also the safety boundary (§6).
+
+**`backlog.md`, `standards-alignment.md` and `outbox/` arrive later**, with the
+[standards library and messaging](vibecoding.md#stage-7--a-standards-library) stages. A backlog is
+worth having from day one: every item gets the date it was captured and the event that should
+bring it back.
 
 **The code nested at `app/`.** Your builder — Lovable, or whatever — owns that folder and
 syncs it to GitHub. The vault holds everything the builder never sees: why you decided
@@ -162,7 +170,7 @@ because you got tired of clicking.
 
 ## 7. Session notes — a running draft
 
-One note per session, `sessions/YYYY-MM-DD-NNN.md`, **opened at the start and appended to as
+One note per session, `sessions/YYYY-MM-DD-NNN-topic.md`, **opened at the start and appended to as
 you go.** Not written at the end.
 
 Under the heading while you work:
@@ -206,16 +214,25 @@ this. Specs, decisions, research, and months of accumulated context.
 /app
 .env
 **/.env
+.env.*
+!.env.example
 .obsidian/plugins/
+.obsidian/workspace.json
 .DS_Store
 ```
+
+**Check for secrets before the first commit.** Old scripts and notes tend to have keys pasted
+into them, and once a key is in git history, deleting the file doesn’t remove it. Have the agent
+search everything you’re about to commit for anything that looks like a key or password, and move
+what it finds into `.env` files, which the lines above keep out of git.
 
 **`/app` with no trailing slash.** A nested git repo is a *gitlink*, and `/app/` does not
 match one. Get this wrong and git quietly stores a pointer to a commit instead of ignoring
 the folder.
 
 Then decide about a remote **deliberately**. Local-only gives you history and undo but no
-backup. That is a legitimate choice; drifting into it is not.
+backup. That is a legitimate choice for a week; drifting into it is not. I am now giving every
+vault a private remote.
 
 ## 9. What it costs
 
@@ -245,8 +262,8 @@ it belongs in a document the charter points at.
 **Status sections lie.** They were true when written. Date them or delete them.
 
 **The builder cannot read your vault.** If you are using Lovable or similar, it only sees
-`app/`. Anything it must obey needs to be in an instructions file *inside* `app/` — a charter
-in the vault governs your sessions and none of its.
+`app/`. Anything it must obey needs to be in an instructions file *inside* `app/` (for Lovable,
+that’s `AGENTS.md`). A charter in the vault governs your sessions and none of its.
 
 **Memory drifts from reality.** Before acting on a memory that names a file, a person, or a
 number, check that it is still true.
