@@ -72,17 +72,20 @@ Kidding aside, it’s a fair description of what this repository is arguing agai
 ‘still broken’ with growing confidence”* is exactly what happens without a spec, and
 *“covers every framework the model picked without asking you”* is what happens without owning
 your own stack. The bonus CD-ROM is the best part. An instant classic!
+
 ## About
 
-**Tim Bonnemann** — Community strategist and e-participation specialist in San José, California, Certified Lovable Expert.
+**[Tim Bonnemann](https://plansphere.com)** — Longtime community builder and e-participation expert ·
+Lovable Certified Expert App Builder 2026 · San José, CA & Bogotá, Colombia
 
 [plansphere.com](https://plansphere.com) · [LinkedIn](https://www.linkedin.com/in/tbonnemann/)
 
 **A few of the projects this came from:**
-[ParticipateDB](https://participatedb.com) ·
-[Schlagerwolke](https://schlagerwolke.de) ·
-[Levantrain](https://levantrain.net) ·
 [Capuchino](https://capuchino.co) ·
-[Stratatouille](https://stratatouille.com) ·
+[Schlagerwolke](https://schlagerwolke.de) ·
 [OFU](https://ofuexchange.net) ·
-[Polligon](https://polligon.io)
+[Stratatouille](https://stratatouille.com) ·
+[Polligon](https://polligon.io) ·
+[Justine.news](https://justine.news) ·
+[Levantrain](https://levantrain.net) ·
+[ParticipateDB](https://participatedb.com)
