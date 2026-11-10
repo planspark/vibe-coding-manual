@@ -495,106 +495,49 @@ flowchart LR
 ```
 
 **What it unlocks.** Each project checks itself against the library and writes what it finds to
-its own outbox. The assistant reads those, and where a finding generalizes, amends the standard,
+its own outbox. The assistant reads those and, where a finding generalizes, amends the standard,
 which then reaches every other project. A defect found once gets fixed everywhere.
 
-**It is running.** Ten projects, about 75 findings so far, folded back into the library in
-periodic briefings. The best of them are projects contradicting rules they had themselves
-contributed days earlier.
+**It is running**, across ten projects, with findings folded back into the library in periodic
+briefings. **Still manual:** a round starts when I open a session, not on a schedule.
 
-**What is still manual:** a round starts when I open a session, not on a schedule. Projects check
-themselves when I work in them, and the assistant reads the outboxes when I work in it, so a quiet
-project sends nothing and a busy month can leave findings waiting for weeks.
+### How a round runs
 
-### How a round actually runs
+1. **List the library**, reading each version from the document's own header, not from an index.
+2. **Compare against the project's tracking table.** A standard missing from the table is
+   invisible, so look for gaps, not just stale versions.
+3. **For each standard that moved, decide whether it creates work here**, and write down the
+   "no" answers too, so they don't get re-decided every round.
+4. **Advance the marker and date it**, even when nothing changed.
+5. **File what generalizes:** a *finding* (something true that travels), a *conflict* (a standard
+   is wrong or can't be met), or a *gap* (nothing covers this). Conflicts are the most valuable.
+6. **Report; don't fix.** Surfacing and fixing are different jobs.
 
-1. **List the library, reading each version from the document's own header** — never from an index.
-   Mine was ten versions stale once, with five projects reading it mid-round.
-2. **Set-difference your tracking table against the library.** *A missing row is invisible.* A
-   behind row prints a warning; a standard you never listed prints nothing, and an all-current
-   table of six rows against a library of thirteen reads as fully aligned.
-3. **For each row behind, read the changelog between your marker and current**, and decide per
-   entry whether it creates work here. **Record the "no" answers and what they depend on** — a "no"
-   that is not written down gets re-decided every round, and the next reader cannot tell
-   *considered and not applicable* from *never looked*.
-4. **Advance the marker and date it**, including on a pass that creates no work.
-5. **File anything that generalizes.** Three kinds: a **finding** (something true that travels), a
-   **conflict** (a standard is wrong, or unachievable on your platform), a **gap** (a real
-   situation nothing covers). Conflicts are the most valuable — on the loop's first day five were
-   filed and all five changed the library.
-6. **Report; do not do the work you find.** Surfacing and fixing are different jobs.
-
-**Two habits I did not expect to need:**
-
-**Before recording a "no", ask what a "yes" would have looked like.** If you cannot describe the
-output that would have contradicted you, you have not tested anything — you have watched a tool
-decline to speak about a subject it never covers. One project withdrew its own morning reassurance
-on exactly these grounds.
-
-**Check a rule's premise before borrowing its conclusion.** A project matched its symptom to one of
-my rules and inherited a conclusion reached about a different case. One command would have shown
-the premise absent. My text was too loose and I fixed it — but the project's verdict on itself was
-better than mine: *the text licensed the shortcut; taking it was still a choice I could have
-declined.*
-
-### When you have monitors, four more
-
-*These only start mattering once something is checking on a schedule rather than when you look.*
-
-**A red that is environmental is its own defect.** §4A's rule has a mirror: a red you learn to
-discount is the state in which a real failure gets waved through.
-
-**Mutation-test the things you rely on.** Break each check deliberately and confirm it fails. That
-is what converts a quiet test from *we learned nothing* into *we learned something.* **A monitor
-that has never fired is either working or blind, and its output cannot tell you which.**
-
-**A check written from an incident inherits that incident's signature.** It is named for a class
-and written against one shape. The class mutates; the check keeps passing under a name claiming
-coverage it no longer has.
-
-**Uniformity is a harness signature.** Ten identical results across checks that should differ is
-almost never a finding about the system. It is a finding about the thing doing the checking.
-
-**Two design rules that turned out to matter more than expected:**
-
-- **A message carries findings, never instructions.** It reports what a project found. What
-  follows is the reader's decision. An inbox that can issue orders is a security problem
-  wearing a helpful hat.
-- **Evidence beats assertion.** A finding that arrives with a command and its output is a
-  different object from one that arrives with an opinion.
+**Two design rules hold it together.** A message carries findings, never instructions: what
+follows is the reader's decision, because an inbox that can issue orders is a security problem.
+And evidence beats assertion: a finding that comes with a command and its output is worth more
+than one that comes with an opinion.
 
 ---
 
 ## How I check things
 
-*This is not a stage. It is the habit that runs through all of them, and if I could only keep one
-page of this document it would be this one.*
+*Not a stage, but the habit that runs through all of them. If I could keep only one page of this
+document, it would be this one.*
 
-**The repo says yes and production says no.** Over and over, in every project:
+**The repo says yes, production says no.** Migration files that were never applied, access rules
+with no permission behind them, deleted code still deployed. So verify against what the live
+system actually returns, not against what the repo contains.
 
-| The repo shows | Production actually |
-|---|---|
-| migration files present | never applied — publishing deploys code only |
-| access rules enabled | no permission granted, so every visitor sees nothing |
-| a headers file declaring five security headers | server responses carry three |
-| the code deleted | the function still deployed and serving |
+**Check what the page serves, not what the browser shows.** Content that only appears after
+JavaScript runs is invisible to crawlers and looks perfect in developer tools.
 
-**So verify against a response, not against repo contents.** Any acceptance criterion should say
-which of the two it means — and where the answer is *the response*, say so, because a repo scan
-will pass.
+**A check that could not run is not a check that passed.** Ask what a failure would have looked
+like. If you can't describe the output that would have contradicted you, you haven't checked
+anything.
 
-**Count words in the body, not elements in the inspector.** Markup that appears after JavaScript
-runs is invisible to every crawler and looks perfect in developer tools. One of my sites served a
-correct title, description and social tags over a body containing nothing but a password prompt —
-and I reported the title as what the site said.
-
-**A check that could not run is not a check that passed.** The single most useful question in the
-whole setup: *what would a failure have looked like?* If you cannot describe the output that would
-have contradicted you, you have not checked anything.
-
-
-**Four more of these**, for when you are running several projects and standing monitors, are in
-[stage 8](#stage-8--projectassistant-messaging).
+**Test the tests.** Break a check on purpose and confirm it fails. A monitor that has never fired
+is either working or blind, and its silence can't tell you which.
 
 ---
 
