@@ -1,6 +1,6 @@
 # The vibecoding guide
 
-> How to take full advantage of AI-assisted web development tools as a non-technical contributor
+> How to take advantage of AI-assisted web development tools as a non-technical contributor
 > — one stage at a time, in the order things actually arrived.
 
 *Last updated: 2026-11-09 · Companion to [the setup manual](setup.md)*
@@ -24,12 +24,12 @@ naming up front, because a document like this can read as more considered than i
 **Tools I have not tried properly.** I looked at Bolt very early on and went with Lovable — I do
 not remember a rigorous reason, and it may have been gut feel. It has turned out well: they have
 improved enormously over the past year and it reads as a reliable development and design partner
-rather than a toy. But **I have not seriously used Replit, Codex, or most of the field**, so
+rather than a toy. But **I have not seriously used Replit, Codex, or many others**, so
 nothing here is a comparison and none of it is a recommendation against anything.
 
 **Capabilities I have not used.** I have barely touched skills — in Lovable or in Claude — and I
 have not been feeding Lovable much project context lately: briefings, background, accumulated
-knowledge. Not on principle. **Things have worked well enough that the need never got urgent**,
+knowledge. Not on principle (most of my projects’ context now lives in their respective Obsidian vaults). **Things have worked well enough that the need never got urgent**,
 which is a perfectly ordinary reason and also exactly the kind of blind spot worth declaring.
 
 So: take what is useful, and assume the parts I have not explored are not evidence about anything.
@@ -68,13 +68,13 @@ flowchart LR
 **→ [Spec-driven development](spec.md)** — its own document, because it is the longest and the
 most transferable part of this.
 
-**The short version:** an AI builder will never tell you your requirements are ambiguous. It picks
+**The short version:** an AI builder may not always tell you your requirements are ambiguous. It picks
 a reading and implements it beautifully, and you meet that decision weeks later when the behavior
 is load-bearing. **Every ambiguity you leave becomes a decision somebody else made for you.**
 
 So: four questions, a rough draft, a list of everything it exposed, two different adversarial
 reviews, a technical design, a simulation — and only then version 1.0. **At least two-thirds of the
-work on a project happens before any code exists**, often closer to eighty percent.
+work on a project happens before any code exists**.
 
 ---
 
