@@ -583,7 +583,7 @@ person a forgotten step is a mistake; with two it is a mistake that lands on som
 
 ### Loop-based development, a.k.a. loop engineering *(in progress)*
 
-**The biggest change in how the work feels since the vault itself.** Everything above is, at
+**The biggest change in how the work feels since the vault itself.** Everything in the stages above is, at
 heart, a conversation: I ask, the AI answers, I read it, I ask again. I am the loop.
 
 The next step is handing the loop over. Instead of a prompt, the agent gets a goal and **a check
