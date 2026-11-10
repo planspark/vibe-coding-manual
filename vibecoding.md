@@ -636,7 +636,7 @@ assumes a single person who can hold the whole picture and whose habits are the 
 
 Two people means the habits have to become explicit: who reviews what, what may go straight to
 main, how a database change gets agreed rather than just made. I have one project with a
-co-founder and this is the pressure that is surfacing there first. **Most of the machinery in the
+collaborator and this is the pressure that is surfacing there first. **Most of the machinery in the
 later stages — the shared library, the written charters, the alignment loop — turns out to be
 preparation for exactly this**, even though I built it for myself.
 
@@ -654,13 +654,12 @@ doesn't happen*.
 ### Paying for the AI steps *(in progress)*
 
 Agents that call a model can bill a personal subscription or an API key, and it isn't always
-obvious which. In one project, an API key sitting in the agents' environment quietly overrode the
-subscription, so every scheduled run was billed per call while it looked free. A subscription also
-ties the agents to one person's login on one machine, which the previous item can't live with.
+obvious which, as one surprise on a bill taught me. A subscription also ties the agents to one
+person's login on one machine, which the previous item can't live with.
 
-**I am moving to API keys**, metered per call, with a cap per key, and the bill checked against
-what the agents were supposed to be doing. One project already calls two providers' APIs for its
-moderation queue.
+**So I am gradually moving more of the AI work into the cloud**: API keys metered per call, a cap
+on each, and the bill checked against what the agents were supposed to be doing. One project
+already calls two providers' APIs for its moderation queue.
 
 ### Running open models locally
 
