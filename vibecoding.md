@@ -45,8 +45,7 @@ flowchart LR
   S5 --> S6["6 · Personal assistant"] --> S7["7 · Standards library"] --> S8["8 · Messaging"]
   classDef done fill:#e8f0fe,stroke:#4a6fa5,color:#1a2b45
   classDef pending fill:#f5f5f5,stroke:#bbb,color:#666,stroke-dasharray:4 3
-  class S1,S2,S3,S4,S5,S6,S7 done
-  class S8 pending
+  class S1,S2,S3,S4,S5,S6,S7,S8 done
 ```
 
 | | Stage | What it unlocks |
@@ -58,7 +57,7 @@ flowchart LR
 | 5 | Agents on cron | the database grows itself, overnight |
 | 6 | Personal assistant | comparing and deciding across projects |
 | 7 | Standards library | write a rule once, adopt it by version |
-| 8 | Project→assistant messaging | alignment maintained in the background *(pending)* |
+| 8 | Project→assistant messaging | a defect found in one project gets fixed in all of them |
 
 ---
 
@@ -473,7 +472,7 @@ that by hand across eight vaults is exactly the kind of task that gets skipped.
 
 ---
 
-## Stage 8 — Project→assistant messaging *(pending)*
+## Stage 8 — Project→assistant messaging
 
 ```mermaid
 flowchart LR
@@ -489,17 +488,17 @@ flowchart LR
   class Out1 new
 ```
 
-**⚠️ As of 18 September 2026 this stage is still in progress. Treat what follows as a design, not
-a recommendation.**
+**What it unlocks.** Each project checks itself against the library and writes what it finds to
+its own outbox. The assistant reads those, and where a finding generalizes, amends the standard,
+which then reaches every other project. A defect found once gets fixed everywhere.
 
-**What it aims at.** Each project checks itself against the library on a schedule and writes
-what it finds to its own outbox. The assistant reads those, and where a finding generalizes,
-amends the standard — which then reaches every other project. A defect found once gets fixed
-everywhere.
+**It is running.** Ten projects, about 75 findings so far, folded back into the library in
+periodic briefings. The best of them are projects contradicting rules they had themselves
+contributed days earlier.
 
-**What already works:** the loop run by hand produces real corrections, including projects
-contradicting rules they had themselves contributed days earlier. **What does not yet:** it
-still needs a person to start each round.
+**What is still manual:** a round starts when I open a session, not on a schedule. Projects check
+themselves when I work in them, and the assistant reads the outboxes when I work in it, so a quiet
+project sends nothing and a busy month can leave findings waiting for weeks.
 
 ### How a round actually runs
 
@@ -589,7 +588,7 @@ have contradicted you, you have not checked anything.
 
 
 **Four more of these**, for when you are running several projects and standing monitors, are in
-[stage 8](#stage-8--projectassistant-messaging-pending).
+[stage 8](#stage-8--projectassistant-messaging).
 
 ---
 
