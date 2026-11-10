@@ -547,7 +547,7 @@ is either working or blind, and its silence can't tell you which.
 *Everything above is in daily use. Everything below is on the list, and saying so is more useful
 than pretending the ladder ends where I happen to be standing.*
 
-### Going from one person to two
+### Going from one person to two *(in progress)*
 
 **The step that changes everything else on this list.** Most of what is described in this manual
 assumes a single person who can hold the whole picture and whose habits are the process.
@@ -569,7 +569,7 @@ numbers**, which is where a couple of these projects now are. What it needs: a s
 with its own database, a deliberate promotion step, and the discipline that nothing reaches
 production without having been somewhere else first.
 
-### CI/CD
+### CI/CD *(in progress)*
 
 *(Continuous integration and continuous delivery — automated checks on every change, and an
 automated path from a merged change to a deployed one.)*
@@ -582,7 +582,7 @@ exactly when things are busiest.
 person, and it stops being fine with more than one contributor (see above). With one
 person a forgotten step is a mistake; with two it is a mistake that lands on somebody else.
 
-### Loop-based development, a.k.a. loop engineering *(in progress)*
+### Loop-based development, a.k.a. loop engineering
 
 **The biggest change in how the work feels since the vault itself.** Everything in the stages above is, at
 heart, a conversation: I ask, the AI answers, I read it, I ask again. I am the loop.
