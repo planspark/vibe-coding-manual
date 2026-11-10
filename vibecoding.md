@@ -659,7 +659,7 @@ answer whenever it is asked.
 store rather than files on disk, a spending cap per run, and an alert when a run fails *or simply
 doesn't happen*.
 
-### Paying for the AI steps *(in progress)*
+### AI via APIs *(in progress)*
 
 Agents that call a model can bill a personal subscription or an API key, and it isn't always
 obvious which, as one surprise on a bill taught me. A subscription also ties the agents to one
