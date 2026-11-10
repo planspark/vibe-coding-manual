@@ -643,9 +643,6 @@ vendor, and hosting is the last piece still sitting on the other side of that li
 - **It is not free.** A Claude subscription is the floor, and the builder charges on top.
 - **It does not make you an engineer.** It makes the parts that were previously impossible
   merely hard, and moves the bottleneck to knowing what to ask for.
-- **Nothing here removes the need to check.** The most useful habit in the whole setup is
-  asking what a failure *would have looked like* — because a check that could not run produces
-  the cleanest result of all.
 
 ---
 
