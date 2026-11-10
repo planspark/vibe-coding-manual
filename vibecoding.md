@@ -432,6 +432,13 @@ What ends up in it is unglamorous and load-bearing: how a database schema stays 
 three parties can change it, what a security baseline actually requires, how to review code an
 AI wrote, how to write a project charter, what US English means here.
 
+**It holds whole features, too, not only rules.** Almost every project eventually wants a blog,
+and a proper one is hours of work: authors and tags, drafts and scheduled posts, an editor, image
+storage, access rules, SEO and social previews, an RSS feed. Now it is one spec in the library,
+and adding it to a new project takes **minutes instead of hours**: the agent reads the spec,
+adapts the few points it marks as project-specific, and hands the builder one prompt. It has gone
+into several projects this way, and every one that finds a gap makes it better for the next.
+
 **How to set it up.** Start with the rule you have now explained twice. Give it a version
 number and a date. Add the evidence — *which project hit this, and what happened* — because a
 standard assembled from taste is one nobody follows, and evidence is what makes a rule
