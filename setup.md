@@ -25,7 +25,7 @@ stranger and starts being someone who works here.**
 
 Three things make that real, and all three are just files:
 
-| | |
+| File | What it holds |
 |---|---|
 | **A charter** | what this project is, and how you work |
 | **Memory** | what it should still know next month |
