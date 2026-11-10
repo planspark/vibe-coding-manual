@@ -637,11 +637,14 @@ production without having been somewhere else first.
 *(Continuous integration and continuous delivery — automated checks on every change, and an
 automated path from a merged change to a deployed one.)*
 
-Right now my checks are commands I remember to run. They are good commands and I do run them —
-but "the human remembered" is not a control, and it degrades exactly when things are busiest.
+**CI is halfway there.** About half my projects run the full gate (install, typecheck, lint,
+tests, build) automatically on every push. That's the 80/20. The other half still rely on
+commands I remember to run, and "the human remembered" is not a control: it degrades exactly when
+things are busiest.
 
-**This matters much more with more than one contributor**, which is the next item. With one person
-a forgotten check is a mistake; with two it is a mistake that lands on somebody else.
+**CD isn't there yet.** Deploying is still the builder's publish button. That's fine for one
+person, and it stops being fine with more than one contributor, which is the next item. With one
+person a forgotten step is a mistake; with two it is a mistake that lands on somebody else.
 
 ### Going from one person to two
 
