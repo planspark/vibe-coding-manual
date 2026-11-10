@@ -548,8 +548,6 @@ than pretending the ladder ends where I happen to be standing.*
 
 ### Loop-based development, a.k.a. loop engineering *(in progress)*
 
-*What the cool kids call it.*
-
 **The biggest change in how the work feels since the vault itself.** Everything above is, at
 heart, a conversation: I ask, the AI answers, I read it, I ask again. I am the loop.
 
@@ -563,6 +561,17 @@ definition of done, which is why the specs and the tests matter more here, not l
 a budget and a stop condition, and narrow permissions, because an agent that can retry forever will.
 And the [checking habit](#how-i-check-things) applies with full force: *a check that could not run
 is not a check that passed*, and a loop will happily report green on one.
+
+### Going from one person to two
+
+**The step that changes everything else on this list.** Most of what is described in this manual
+assumes a single person who can hold the whole picture and whose habits are the process.
+
+Two people means the habits have to become explicit: who reviews what, what may go straight to
+main, how a database change gets agreed rather than just made. I have one project with a
+collaborator and this is the pressure that is surfacing there first. **Most of the machinery in the
+later stages — the shared library, the written charters, the alignment loop — turns out to be
+preparation for exactly this**, even though I built it for myself.
 
 ### Staging and production, properly separated
 
@@ -585,19 +594,18 @@ rely on commands I remember to run, and "the human remembered" is not a control:
 exactly when things are busiest.
 
 **CD isn't there yet.** Deploying is still the builder's publish button. That's fine for one
-person, and it stops being fine with more than one contributor, which is the next item. With one
+person, and it stops being fine with more than one contributor (see above). With one
 person a forgotten step is a mistake; with two it is a mistake that lands on somebody else.
 
-### Going from one person to two
+### AI via APIs *(in progress)*
 
-**The step that changes everything else on this list.** Most of what is described in this manual
-assumes a single person who can hold the whole picture and whose habits are the process.
+Agents that call a model can bill a personal subscription or an API key, and it isn't always
+obvious which, as one surprise on a bill taught me. A subscription also ties the agents to one
+person's login on one machine, which the next item can't live with.
 
-Two people means the habits have to become explicit: who reviews what, what may go straight to
-main, how a database change gets agreed rather than just made. I have one project with a
-collaborator and this is the pressure that is surfacing there first. **Most of the machinery in the
-later stages — the shared library, the written charters, the alignment loop — turns out to be
-preparation for exactly this**, even though I built it for myself.
+**So I am gradually moving more of the AI work into the cloud**: API keys metered per call, a cap
+on each, and the bill checked against what the agents were supposed to be doing. One project
+already calls two providers' APIs for its moderation queue.
 
 ### Agents in the cloud
 
@@ -610,19 +618,10 @@ answer whenever it is asked.
 store rather than files on disk, a spending cap per run, and an alert when a run fails *or simply
 doesn't happen*.
 
-### AI via APIs *(in progress)*
+### Use of open models
 
-Agents that call a model can bill a personal subscription or an API key, and it isn't always
-obvious which, as one surprise on a bill taught me. A subscription also ties the agents to one
-person's login on one machine, which the previous item can't live with.
-
-**So I am gradually moving more of the AI work into the cloud**: API keys metered per call, a cap
-on each, and the bill checked against what the agents were supposed to be doing. One project
-already calls two providers' APIs for its moderation queue.
-
-### Running open models locally
-
-I have barely started here — a week or two of poking at it. The reports are good and improving
+I have barely started here — a week or two of poking at it. Most likely it starts on my own
+machine and maybe moves to the cloud later. The reports are good and improving
 fast, and the appeal is obvious: cost, privacy, and not being dependent on somebody else's
 availability for routine work.
 
